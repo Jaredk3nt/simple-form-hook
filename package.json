@@ -1,6 +1,6 @@
 {
-  "name": "usesimpleform",
-  "version": "1.0.0",
+  "name": "use-simple-form",
+  "version": "1.0.1",
   "description": "simple form hook",
   "main": "dist/index.js",
   "scripts": {
@@ -20,8 +20,8 @@
     "@babel/preset-env": "^7.3.1",
     "@babel/preset-react": "^7.0.0"
   },
-  "dependencies": {
-    "react": "^16.8.2"
+  "peerDependencies": {
+    "react": "^16.8.0"
   },
   "repository": {
     "type": "git",

@@ -29,7 +29,7 @@ function useSimpleForm(initialState) {
   // Return actual updater function for deep updates
   return [
     form,
-    ({ validator, parent }) => {
+    ({ validator, parent } = {}) => {
       return e => {
         const name = e.target.name;
         const value = e.target.value.trim();
