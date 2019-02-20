@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 // Utility for updating values with parent objects
 function deepSetImm(obj, dest, path, field, value) {
   if (!path || !path.length) {
@@ -46,3 +48,6 @@ function useSimpleForm(initialState) {
     }
   ];
 }
+
+
+export default useSimpleForm;

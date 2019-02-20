@@ -2,14 +2,29 @@
   "name": "usesimpleform",
   "version": "1.0.0",
   "description": "simple form hook",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
-
+    "build": "babel src -d dist",
+    "clean": "rm -r dist",
+    "prepublish": "npm run clean; npm run build"
   },
   "keywords": [
     "hook",
     "react"
   ],
   "author": "Jared K. Jones",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.3",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0"
+  },
+  "dependencies": {
+    "react": "^16.8.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jaredk3nt/use-simple-form.git"
+  }
 }
