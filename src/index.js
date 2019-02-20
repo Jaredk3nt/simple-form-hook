@@ -13,7 +13,7 @@ function deepSetImm(obj, dest, path, updator) {
   }
 
   const current = path[0];
-  dest[current] = deepSet(
+  dest[current] = deepSetImm(
     obj[current],
     dest[current],
     path.slice(1),
