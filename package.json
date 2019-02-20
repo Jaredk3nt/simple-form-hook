@@ -1,0 +1,15 @@
+{
+  "name": "usesimpleform",
+  "version": "1.0.0",
+  "description": "simple form hook",
+  "main": "src/index.js",
+  "scripts": {
+
+  },
+  "keywords": [
+    "hook",
+    "react"
+  ],
+  "author": "Jared K. Jones",
+  "license": "ISC"
+}
