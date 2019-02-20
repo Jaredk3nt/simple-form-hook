@@ -1,9 +1,9 @@
 import { useState } from 'react';
 
 // Utility for updating values with parent objects
-function deepSetImm(obj, dest, path, field, value) {
+function deepSetImm(obj, dest, path, updator) {
   if (!path || !path.length) {
-    return { ...obj, [field]: value };
+    return { ...obj, ...updator };
   }
   if (typeof path === "string") {
     path = path.split(".");
@@ -17,8 +17,7 @@ function deepSetImm(obj, dest, path, field, value) {
     obj[current],
     dest[current],
     path.slice(1),
-    field,
-    value
+    updator
   );
 
   return dest;
@@ -40,7 +39,7 @@ function useSimpleForm(initialState) {
         };
 
         if (parent) {
-          return update(deepSetImm(form, {}, parent, name, value));
+          return update(deepSetImm(form, {}, parent, updator));
         }
 
         return update({ ...form, ...updator });
